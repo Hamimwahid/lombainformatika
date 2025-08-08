@@ -1,0 +1,959 @@
+!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>80 Tahun Indonesia Merdeka - Generasi Maju, Cerdas, dan Berkarakter</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Variabel Warna */
+:root {
+--merah: #CE1126;
+--putih: #FFFFFF;
+--emas: #FFD700;
+--hijau: #2E8B57;
+--biru: #0066B2;
+--abu: #F0F0F0;
+--hitam: #333333;
+}
+
+/* Reset CSS */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background-color: var(--putih);
+color: var(--hitam);
+line-height: 1.6;
+}
+
+/* Header & Navigasi */
+header {
+background: linear-gradient(135deg, var(--merah) 0%, #8B0000 100%);
+color: var(--putih);
+padding: 1rem 0;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 15px;
+}
+
+.header-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+display: flex;
+align-items: center;
+}
+
+.logo img {
+height: 60px;
+margin-right: 15px;
+}
+
+.logo h1 {
+font-size: 1.8rem;
+font-weight: 700;
+}
+
+.logo span {
+color: var(--emas);
+}
+
+nav ul {
+display: flex;
+list-style: none;
+}
+
+nav ul li {
+margin-left: 20px;
+}
+
+nav ul li a {
+color: var(--putih);
+text-decoration: none;
+font-weight: 600;
+padding: 10px 15px;
+border-radius: 5px;
+transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+background-color: var(--putih);
+color: var(--merah);
+}
+
+.hamburger {
+display: none;
+cursor: pointer;
+font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+url('https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-4.0.3') center/cover no-repeat;
+height: 80vh;
+display: flex;
+align-items: center;
+text-align: center;
+color: var(--putih);
+position: relative;
+}
+
+.hero-content {
+max-width: 800px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.hero h2 {
+font-size: 3.5rem;
+margin-bottom: 20px;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+font-size: 1.5rem;
+margin-bottom: 30px;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn {
+display: inline-block;
+background-color: var(--merah);
+color: var(--putih);
+padding: 12px 30px;
+border-radius: 5px;
+text-decoration: none;
+font-weight: 600;
+transition: all 0.3s ease;
+border: 2px solid var(--merah);
+}
+
+.btn:hover {
+background-color: transparent;
+color: var(--putih);
+}
+
+/* Section Umum */
+section {
+padding: 80px 0;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 50px;
+position: relative;
+}
+
+.section-title h2 {
+font-size: 2.5rem;
+color: var(--merah);
+margin-bottom: 15px;
+display: inline-block;
+position: relative;
+}
+
+.section-title h2:after {
+content: '';
+position: absolute;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+width: 80px;
+height: 4px;
+background-color: var(--merah);
+}
+
+.section-title p {
+max-width: 700px;
+margin: 20px auto 0;
+font-size: 1.1rem;
+color: var(--hitam);
+}
+
+/* Tentang Kami */
+.about-content {
+display: flex;
+align-items: center;
+gap: 40px;
+flex-wrap: wrap;
+}
+
+.about-image {
+flex: 1;
+min-width: 300px;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+width: 100%;
+height: auto;
+transition: transform 0.5s ease;
+}
+
+.about-image img:hover {
+transform: scale(1.05);
+}
+
+.about-text {
+flex: 1;
+min-width: 300px;
+}
+
+.about-text h3 {
+font-size: 1.8rem;
+margin-bottom: 20px;
+color: var(--merah);
+}
+
+.about-text p {
+margin-bottom: 15px;
+font-size: 1.1rem;
+}
+
+/* Nilai-Nilai */
+.values {
+background-color: var(--abu);
+}
+
+.values-container {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 30px;
+}
+
+.value-card {
+background-color: var(--putih);
+border-radius: 10px;
+padding: 30px;
+text-align: center;
+width: 280px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+transition: all 0.3s ease;
+}
+
+.value-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.value-icon {
+font-size: 3rem;
+color: var(--merah);
+margin-bottom: 20px;
+}
+
+.value-card h3 {
+font-size: 1.5rem;
+margin-bottom: 15px;
+color: var(--merah);
+}
+
+/* Galeri */
+.gallery-container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 25px;
+}
+
+.gallery-item {
+border-radius: 10px;
+overflow: hidden;
+position: relative;
+height: 250px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+transform: scale(1.1);
+}
+
+.gallery-overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: linear-gradient(transparent, rgba(0,0,0,0.8));
+padding: 20px;
+color: white;
+transform: translateY(100%);
+transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+transform: translateY(0);
+}
+
+/* Generasi Emas */
+.generation {
+background: linear-gradient(to bottom, var(--merah), #8B0000);
+color: var(--putih);
+}
+
+.generation-content {
+display: flex;
+flex-wrap: wrap;
+gap: 40px;
+justify-content: center;
+align-items: center;
+}
+
+.generation-text {
+flex: 1;
+min-width: 300px;
+}
+
+.generation-text h3 {
+font-size: 2rem;
+margin-bottom: 20px;
+}
+
+.generation-image {
+flex: 1;
+min-width: 300px;
+text-align: center;
+}
+
+.generation-image img {
+max-width: 100%;
+border-radius: 10px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Kontak */
+.contact-container {
+display: flex;
+flex-wrap: wrap;
+gap: 40px;
+}
+
+.contact-info {
+flex: 1;
+min-width: 300px;
+}
+
+.contact-item {
+display: flex;
+align-items: flex-start;
+margin-bottom: 25px;
+}
+
+.contact-icon {
+font-size: 1.5rem;
+color: var(--merah);
+margin-right: 15px;
+min-width: 30px;
+}
+
+.contact-text h4 {
+font-size: 1.3rem;
+margin-bottom: 5px;
+}
+
+.contact-form {
+flex: 1;
+min-width: 300px;
+background-color: var(--abu);
+padding: 30px;
+border-radius: 10px;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ddd;
+border-radius: 5px;
+font-size: 1rem;
+}
+
+.form-group textarea {
+height: 150px;
+resize: vertical;
+}
+
+.btn-submit {
+background-color: var(--merah);
+color: var(--putih);
+border: none;
+padding: 12px 30px;
+border-radius: 5px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+background-color: #8B0000;
+}
+
+/* Footer */
+footer {
+background-color: var(--hitam);
+color: var(--putih);
+padding: 60px 0 20px;
+}
+
+.footer-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 40px;
+margin-bottom: 40px;
+}
+
+.footer-col {
+flex: 1;
+min-width: 250px;
+}
+
+.footer-col h3 {
+font-size: 1.5rem;
+margin-bottom: 20px;
+color: var(--emas);
+position: relative;
+padding-bottom: 10px;
+}
+
+.footer-col h3:after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 50px;
+height: 3px;
+background-color: var(--merah);
+}
+
+.footer-col ul {
+list-style: none;
+}
+
+.footer-col ul li {
+margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+color: var(--putih);
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+color: var(--merah);
+padding-left: 5px;
+}
+
+.social-links {
+display: flex;
+gap: 15px;
+margin-top: 20px;
+}
+
+.social-links a {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+background-color: rgba(255,255,255,0.1);
+border-radius: 50%;
+color: var(--putih);
+transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+background-color: var(--merah);
+transform: translateY(-5px);
+}
+
+.copyright {
+text-align: center;
+padding-top: 20px;
+border-top: 1px solid rgba(255,255,255,0.1);
+font-size: 0.9rem;
+color: rgba(255,255,255,0.7);
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+.hero h2 {
+font-size: 2.8rem;
+}
+
+.hero p {
+font-size: 1.2rem;
+}
+}
+
+@media (max-width: 768px) {
+.hamburger {
+display: block;
+}
+
+nav ul {
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+background-color: var(--merah);
+flex-direction: column;
+align-items: center;
+padding: 20px 0;
+clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+transition: all 0.4s ease;
+}
+
+nav ul.active {
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+nav ul li {
+margin: 10px 0;
+}
+
+.hero h2 {
+font-size: 2.3rem;
+}
+
+.section-title h2 {
+font-size: 2rem;
+}
+}
+
+@media (max-width: 576px) {
+.hero {
+height: 70vh;
+}
+
+.hero h2 {
+font-size: 2rem;
+}
+
+.hero p {
+font-size: 1rem;
+}
+
+.section-title h2 {
+font-size: 1.8rem;
+}
+
+.logo h1 {
+font-size: 1.4rem;
+}
+}
+</style>
+</head>
+<body>
+<!-- Header & Navigasi -->
+<header>
+<div class="container header-container">
+<div class="logo">
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiNDRTExMjYiLz48cGF0aCBkPSJNNTAgMjVMNzUgNTBMNTAgNzVMMjUgNTBaIiBmaWxsPSIjRkZGRkZGIi8+PC9zdmc+" alt="Logo Indonesia">
+<h1>80 Tahun <span>Merdeka</span></h1>
+</div>
+
+<nav>
+<div class="hamburger">
+<i class="fas fa-bars"></i>
+</div>
+<ul>
+<li><a href="#" class="active">Beranda</a></li>
+<li><a href="#tentang">Tentang Kami</a></li>
+<li><a href="#nilai">Nilai-Nilai</a></li>
+<li><a href="#galeri">Galeri</a></li>
+<li><a href="#generasi">Generasi Emas</a></li>
+<li><a href="#kontak">Kontak</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-content">
+<h2>80 Tahun Indonesia Merdeka</h2>
+<p>Generasi Maju, Cerdas, dan Berkarakter untuk Indonesia Emas</p>
+<a href="#tentang" class="btn">Jelajahi Sekarang</a>
+</div>
+</section>
+
+<!-- Tentang Kami -->
+<section id="tentang">
+<div class="container">
+<div class="section-title">
+<h2>Tentang Kami</h2>
+<p>Website ini hadir untuk memperingati 80 Tahun Kemerdekaan Indonesia dengan semangat baru untuk menciptakan generasi maju, cerdas, dan berkarakter.</p>
+</div>
+
+<div class="about-content">
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1620987321029-0c2b5f1a112a?ixlib=rb-4.0.3" alt="Kemerdekaan Indonesia">
+</div>
+<div class="about-text">
+<h3>Mengapa 80 Tahun Kemerdekaan Penting?</h3>
+<p>Delapan dekade perjalanan bangsa Indonesia adalah bukti ketangguhan dan semangat juang rakyat Indonesia. Di usia yang matang ini, kita diingatkan kembali akan perjuangan para pahlawan dan pentingnya mempertahankan kemerdekaan dengan cara yang sesuai dengan zaman.</p>
+<p>Website ini bertujuan untuk menginspirasi generasi muda agar menjadi pribadi yang maju dalam pemikiran, cerdas dalam bertindak, dan berkarakter kuat dalam menjunjung tinggi nilai-nilai Pancasila.</p>
+<p>Kami percaya bahwa masa depan Indonesia yang gemilang terletak pada generasi muda yang mampu mengombinasikan kecerdasan intelektual, emosional, dan spiritual dengan karakter yang kuat dan integritas yang tinggi.</p>
+<a href="#generasi" class="btn">Pelajari Lebih Lanjut</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Nilai-Nilai -->
+<section id="nilai" class="values">
+<div class="container">
+<div class="section-title">
+<h2>Nilai-Nilai Utama</h2>
+<p>Tiga pilar utama yang menjadi landasan untuk membentuk generasi maju, cerdas, dan berkarakter</p>
+</div>
+
+<div class="values-container">
+<div class="value-card">
+<div class="value-icon">
+<i class="fas fa-chart-line"></i>
+</div>
+<h3>Maju</h3>
+<p>Generasi yang berpikiran terbuka, inovatif, dan mampu bersaing di kancah global dengan mengedepankan kemajuan teknologi dan ilmu pengetahuan tanpa meninggalkan jati diri bangsa.</p>
+</div>
+
+<div class="value-card">
+<div class="value-icon">
+<i class="fas fa-brain"></i>
+</div>
+<h3>Cerdas</h3>
+<p>Generasi yang tidak hanya cerdas secara akademis, tetapi juga memiliki kecerdasan emosional dan spiritual yang tinggi, mampu menyelesaikan masalah dengan bijak dan kreatif.</p>
+</div>
+
+<div class="value-card">
+<div class="value-icon">
+<i class="fas fa-heart"></i>
+</div>
+<h3>Berkarakter</h3>
+<p>Generasi yang memiliki integritas, jujur, bertanggung jawab, menghargai keberagaman, dan menjunjung tinggi nilai-nilai Pancasila dalam kehidupan sehari-hari.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Galeri -->
+<section id="galeri">
+<div class="container">
+<div class="section-title">
+<h2>Galeri Perjuangan</h2>
+<p>Momen-momen bersejarah dalam perjalanan 80 tahun kemerdekaan Indonesia</p>
+</div>
+
+<div class="gallery-container">
+<div class="gallery-item">
+<img src=https://images.app.goo.gl/3YZqJhEFfs9HfhUz7 alt="Proklamasi Kemerdekaan">
+<div class="gallery-overlay">
+<h3>Proklamasi 1945</h3>
+<p>Detik-detik pembacaan teks proklamasi oleh Soekarno-Hatta</p>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1596120236172-231999844ade?ixlib=rb-4.0.3" alt="Pembangunan Indonesia">
+<div class="gallery-overlay">
+<h3>Era Pembangunan</h3>
+<p>Periode pembangunan infrastruktur dan ekonomi nasional</p>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1542051842989-d1a3d6498f7a?ixlib=rb-4.0.3" alt="Reformasi">
+<div class="gallery-overlay">
+<h3>Gerakan Reformasi</h3>
+<p>Perjuangan menuju demokrasi dan kebebasan berpendapat</p>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1592924728350-1a2e1e56f1e3?ixlib=rb-4.0.3" alt="Indonesia Modern">
+<div class="gallery-overlay">
+<h3>Indonesia Modern</h3>
+<p>Kemajuan teknologi dan ekonomi di era digital</p>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1586448900405-0fbb35b1c48b?ixlib=rb-4.0.3" alt="Kebudayaan">
+<div class="gallery-overlay">
+<h3>Keberagaman Budaya</h3>
+<p>Kekayaan budaya sebagai identitas bangsa Indonesia</p>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src=https://images.app.goo.gl/j1tiUs7nxMeBP6s66 alt="Pemuda">
+<div class="gallery-overlay">
+<h3>Generasi Muda</h3>
+<p>Pemuda sebagai penerus cita-cita bangsa</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Generasi Emas -->
+<section id="generasi" class="generation">
+<div class="container">
+<div class="section-title">
+<h2>Generasi Emas Indonesia</h2>
+<p>Menyiapkan generasi penerus untuk Indonesia yang lebih baik di masa depan</p>
+</div>
+
+<div class="generation-content">
+<div class="generation-text">
+<h3>Mewujudkan Indonesia Emas 2045</h3>
+<p>Di usia 100 tahun kemerdekaannya pada 2045, Indonesia diproyeksikan menjadi salah satu kekuatan ekonomi terbesar di dunia. Untuk mewujudkan visi Indonesia Emas tersebut, diperlukan generasi muda yang unggul dalam berbagai bidang.</p>
+<p>Generasi Emas Indonesia adalah generasi yang:</p>
+<ul>
+<li><i class="fas fa-check"></i> Menguasai ilmu pengetahuan dan teknologi</li>
+<li><i class="fas fa-check"></i> Memiliki karakter kuat dan moral yang tinggi</li>
+<li><i class="fas fa-check"></i> Cinta tanah air dan bangga menjadi bangsa Indonesia</li>
+<li><i class="fas fa-check"></i> Mampu bersaing secara global namun tetap berakar pada budaya lokal</li>
+<li><i class="fas fa-check"></i> Berjiwa inovatif dan kreatif dalam menyelesaikan masalah</li>
+</ul>
+<p>Melalui pendidikan karakter, pengembangan keterampilan abad 21, dan penguatan nilai-nilai kebangsaan, kita siapkan generasi emas untuk memimpin Indonesia menuju masa depan yang gemilang.</p>
+</div>
+
+<div class="generation-image">
+<img src="https://images.unsplash.com/photo-1561484930-974554019ade?ixlib=rb-4.0.3" alt="Generasi Emas">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Kontak -->
+<section id="kontak">
+<div class="container">
+<div class="section-title">
+<h2>Hubungi Kami</h2>
+<p>Kami terbuka untuk saran, kritik, dan kerjasama dalam memajukan generasi muda Indonesia</p>
+</div>
+
+<div class="contact-container">
+<div class="contact-info">
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-user"></i>
+</div>
+<div class="contact-text">
+<h4>Nama Kontak</h4>
+<p>Hamim Wahid</p>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-phone"></i>
+</div>
+<div class="contact-text">
+<h4>Telepon</h4>
+<p>0822-2853-8619</p>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-envelope"></i>
+</div>
+<div class="contact-text">
+<h4>Email</h4>
+<p>info@80tahunmerdeka.id</p>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<div class="contact-text">
+<h4>Alamat</h4>
+<p>Jl. adonisamad</p>
+</div>
+</div>
+</div>
+
+<div class="contact-form">
+<form>
+<div class="form-group">
+<label for="name">Nama Lengkap</label>
+<input type="text" id="name" required>
+</div>
+
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" required>
+</div>
+
+<div class="form-group">
+<label for="phone">Telepon</label>
+<input type="tel" id="phone">
+</div>
+
+<div class="form-group">
+<label for="message">Pesan</label>
+<textarea id="message" required></textarea>
+</div>
+
+<button type="submit" class="btn-submit">Kirim Pesan</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-container">
+<div class="footer-col">
+<h3>80 Tahun Merdeka</h3>
+<p>Website resmi peringatan 80 Tahun Kemerdekaan Indonesia dengan fokus pada pembentukan generasi maju, cerdas, dan berkarakter untuk Indonesia Emas 2045.</p>
+<div class="social-links">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+
+<div class="footer-col">
+<h3>Menu Utama</h3>
+<ul>
+<li><a href="#">Beranda</a></li>
+<li><a href="#tentang">Tentang Kami</a></li>
+<li><a href="#nilai">Nilai-Nilai</a></li>
+<li><a href="#galeri">Galeri</a></li>
+<li><a href="#generasi">Generasi Emas</a></li>
+<li><a href="#kontak">Kontak</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h3>Artikel Terbaru</h3>
+<ul>
+<li><a href="#">Peran Pemuda dalam Mengisi Kemerdekaan</a></li>
+<li><a href="#">Pendidikan Karakter untuk Generasi Maju</a></li>
+<li><a href="#">Inovasi Teknologi Anak Bangsa</a></li>
+<li><a href="#">Melestarikan Budaya di Era Digital</a></li>
+<li><a href="#">Kisah Inspiratif Pemuda Indonesia</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h3>Newsletter</h3>
+<p>Berlangganan newsletter kami untuk mendapatkan informasi terbaru tentang kegiatan dan artikel inspiratif.</p>
+<form>
+<div class="form-group">
+<input type="email" placeholder="Email Anda" required>
+</div>
+<button type="submit" class="btn-submit">Berlangganan</button>
+</form>
+</div>
+</div>
+
+<div class="copyright">
+<p>&copy; 2023 80 Tahun Indonesia Merdeka - Generasi Maju, Cerdas, dan Berkarakter. Seluruh Hak Cipta Dilindungi.</p>
+</div>
+</div>
+</footer>
+
+<script>
+// Navigasi Mobile
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', () => {
+navMenu.classList.toggle('active');
+});
+
+// Tutup menu saat item diklik
+document.querySelectorAll('nav ul li a').forEach(item => {
+item.addEventListener('click', () => {
+navMenu.classList.remove('active');
+});
+});
+
+// Animasi Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+window.scrollTo({
+top: target.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+
+// Animasi saat scroll
+window.addEventListener('scroll', () => {
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+let current = '';
+
+sections.forEach(section => {
+const sectionTop = section.offsetTop;
+const sectionHeight = section.clientHeight;
+
+if (scrollY >= (sectionTop - 200)) {
+current = section.getAttribute('id');
+}
+});
+
+navLinks.forEach(link => {
+link.classList.remove('active');
+if (link.getAttribute('href') === `#${current}`) {
+link.classList.add('active');
+}
+});
+});
+</script>
+</body>
+</html>
